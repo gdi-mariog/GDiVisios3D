@@ -69,6 +69,12 @@ export class MapComponent implements OnInit, OnDestroy {
         showGroundExclusionToggle: true
       };
 
+      const terrain3dElevationLayer = new ElevationLayer({
+        url: 'https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer',
+        visible: true,
+        title: 'Terraing 3D Layer',
+      });
+
       const zgDtm2024ElevationLayer = new ElevationLayer({
         url: 'https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/ArcGIS/rest/services/ZG_DTM_2024/ImageServer',
         visible: true,
@@ -83,6 +89,7 @@ export class MapComponent implements OnInit, OnDestroy {
       const map = new Map({
         basemap: config.basemap || 'streets-vector',
         layers: [
+          terrain3dElevationLayer,
           zgDtm2024ElevationLayer,
           zg3dLod22024SceneLayer
         ],
