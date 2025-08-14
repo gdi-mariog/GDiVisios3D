@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
 
@@ -11,6 +11,8 @@ import SceneLayer from '@arcgis/core/layers/SceneLayer';
 
 import { SliceComponent } from '../slice/slice.component';
 import { ConfigService } from '../../../core/services/config.service';
+import { AppConfig } from '../../../core';
+import { ArcGisService } from '../../../core/services/arcgis.service';
 
 @Component({
   selector: 'app-map',
@@ -21,10 +23,12 @@ import { ConfigService } from '../../../core/services/config.service';
 })
 export class MapComponent implements OnInit, OnDestroy {
   @ViewChild('viewDiv', { static: true }) viewDiv!: ElementRef;
+  private el = inject(ElementRef<HTMLElement>);
 
   public static map: Map;
   public static view: SceneView;
   public view: SceneView | null = null;
+  public appConfig: AppConfig | null = null;
 
   // Widget visibility flags from config
   showSliceWidget: boolean = false;
@@ -32,7 +36,10 @@ export class MapComponent implements OnInit, OnDestroy {
 
   private destroy$ = new Subject<void>();
 
-  constructor(private configService: ConfigService) {}
+  constructor(
+    private configService: ConfigService,
+    private arcgisService: ArcGisService
+  ) {}
 
   async ngOnInit() {
     // Wait for config to load before initializing map
@@ -40,9 +47,19 @@ export class MapComponent implements OnInit, OnDestroy {
       takeUntil(this.destroy$)
     ).subscribe(config => {
       if (config && !this.view) {
-        this.initializeMap(config);
+        this.initializeOnlyMap(config);
       }
     });
+
+    const container = this.el.nativeElement.querySelector('.map') as HTMLDivElement;
+    await this.arcgisService.init(MapComponent.map, container, [15.978, 45.492], 6);
+
+    await this.arcgisService.addElevationLayer('https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer',
+      {
+        visible: true,
+        title: 'Terrain 3D Layer',
+      }
+    );
   }
 
   ngOnDestroy() {
@@ -54,7 +71,17 @@ export class MapComponent implements OnInit, OnDestroy {
     }
   }
 
-  private async initializeMap(config: any) {
+  private async initializeOnlyMap(config: AppConfig) {
+    this.appConfig = config;
+
+    const map = new Map({
+      basemap: config.basemap || 'streets-vector',
+    });
+
+    MapComponent.map = map;
+  }
+
+  private async initializeMap(config: AppConfig) {
     try {
       // Load widget configuration
       this.showSliceWidget = config.showSliceWidget || false;

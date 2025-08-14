@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
-import { MapComponent } from './components/arcgis/map/map.component';
 
 export const routes: Routes = [
-  { path: '', component: MapComponent }
+  {
+    path: 'map',
+    loadComponent: () => import('./components/arcgis/map/map.component').then(m => m.MapComponent)
+  },
+  { path: '', redirectTo: 'map', pathMatch: 'full' }
 ];
