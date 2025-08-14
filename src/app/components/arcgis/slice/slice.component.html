@@ -1,0 +1,62 @@
+<div class="slice-widget-container" [class.widget-visible]="isVisible">
+      @if (isVisible) {
+        <div class="slice-controls">
+          <button
+            class="slice-btn toggle-btn"
+            [class.active]="isSliceActive"
+            (click)="toggleSlice()"
+            title="Toggle Slice Tool">
+            <span class="slice-icon">✂️</span>
+            Slice Tool
+          </button>
+
+          @if (isSliceActive) {
+            <div class="slice-options">
+              <label class="slice-option">
+                <input
+                  type="checkbox"
+                  [checked]="sliceConfig.tiltEnabled"
+                  (change)="toggleTilt($event)">
+                Tilt Enabled
+              </label>
+
+              <label class="slice-option">
+                <input
+                  type="checkbox"
+                  [checked]="sliceConfig.excludeGroundSurface"
+                  (change)="toggleExcludeGround($event)">
+                Exclude Ground
+              </label>
+
+              <select
+                class="slice-shape-select"
+                [value]="sliceConfig.shape"
+                (change)="changeShape($event)">
+                <option value="plane">Plane</option>
+                <option value="sphere">Sphere</option>
+                <option value="box">Box</option>
+              </select>
+
+              <button
+                class="slice-btn clear-btn"
+                (click)="clearSlice()"
+                title="Clear Slice">
+                Clear Slice
+              </button>
+            </div>
+
+            <!-- ArcGIS Slice Map Component -->
+            <arcgis-slice
+              #sliceComponent
+              [view]="view"
+              [tiltEnabled]="sliceConfig.tiltEnabled"
+              [excludeGroundSurface]="sliceConfig.excludeGroundSurface"
+              [shape]="sliceConfig.shape"
+              class="arcgis-slice-component"
+              (arcgisReady)="onSliceReady($event)"
+              style="display: none;">
+            </arcgis-slice>
+          }
+        </div>
+      }
+    </div>

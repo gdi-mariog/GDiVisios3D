@@ -1,0 +1,32 @@
+.gdi-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .gdi-logo {
+    .logo-text {
+      font-size: 14px;
+    }
+  }
+}

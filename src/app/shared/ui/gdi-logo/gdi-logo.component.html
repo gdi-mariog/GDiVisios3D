@@ -1,0 +1,14 @@
+<div class="gdi-logo" [style.width]="width" [style.height]="height">
+  <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Logo SVG content - replace with actual GDI logo -->
+    <rect x="10" y="10" width="40" height="40" fill="#0066cc" rx="5"/>
+    <circle cx="70" cy="30" r="20" fill="#00aa44"/>
+    <polygon points="100,15 120,45 80,45" fill="#ff6600"/>
+    @if (showText) {
+      <text x="140" y="35" font-family="Arial, sans-serif" font-size="16" fill="#333">GDI</text>
+    }
+  </svg>
+  @if (showText) {
+    <span class="logo-text">Visios3D</span>
+  }
+</div>

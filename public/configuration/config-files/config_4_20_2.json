@@ -1,0 +1,1529 @@
+{
+  "title": "ZG3D: 3D model Grada Zagreba",
+  "subtitle": "",
+  "tenantLogoUri": "configuration/img/header_logo.png",
+  "gdiLogoUri": "configuration/img/gdi_logo_40_white.png",
+
+  "appVersion": "Version: 4.20.2",
+
+  "modalFooterLeftDestination": "https://www.zagreb.hr/prostorne-informacije-i-istrazivanja/181157",
+  "modalFooterLeftText": "GRAD ZAGREB\nGRADSKI URED ZA GOSPODARSTVO, EKOLOŠKU ODRŽIVOST I STRATEGIJSKO PLANIRANJE",
+
+  "modalFooterRightLogoUri": "configuration/img/gdi_logo_cyan.png",
+  "modalFooterRightDestination": "https://gdi.net/",
+
+  "helpModalContentUri": "configuration/modals/help-modal-content.html",
+  "welcomeModalContentUri": "configuration/modals/welcome-modal-content.html",
+  "aboutModalContentUri": "configuration/modals/about-modal-content.html",
+  "releaseNotesModalContentUri": "configuration/modals/release-notes-modal-content.html",
+  "circleUri": "configuration/tool descriptions/circle.html",
+  "lineUri": "configuration/tool descriptions/line.html",
+  "multipleUri": "configuration/tool descriptions/multiple.html",
+  "pointUri": "configuration/tool descriptions/point.html",
+  "polygonUri": "configuration/tool descriptions/polygon.html",
+
+  "showWelcomeModal": true,
+
+  "showBookmarksPanel": false,
+
+  "tocPanelActive": true,
+
+  "showSliceWidget": true,
+  "sliceConfig": {
+    "enabled": true,
+    "position": "top-right",
+    "tiltEnabled": true,
+    "excludeGroundSurface": false,
+    "defaultShape": "plane",
+    "showShapeButtons": true,
+    "showTiltControls": true,
+    "showGroundExclusionToggle": true
+  },
+
+  "showBuildingExplorerWidget": true,
+
+  "showLineOfSightWidget": true,
+
+  "showElevationProfileWidget": true,
+
+  "theme-bg": "theme-bg",
+  "theme-text": "theme-text",
+
+  "urlPrefix": [ "https://geoportal.dgu.hr" ],
+  "proxyUrl": "https://localhost/DotNet/proxy.ashx",
+
+  "supportedLayerTypes": "WMSLayer,WMTSLayer,FeatureLayer,SceneLayer,PointCloudLayer,BuildingSceneLayer,MapImageLayer,TileLayer,ImageryTileLayer,VectorTileLayer,IntegratedMeshLayer",
+
+  "spatialWkid": "102100",
+  "basemap": "osm",
+  "layerListGoToFullExtentButtonsEnabled": true,
+
+  "initialDateTime": "April 7, 2019 15:00:00",
+  "shadowsEnabled": true,
+  "waterReflection": true,
+  "ambientOcclusionEnabled": true,
+  "viewLonLatElevation": [ 15.9793, 45.7776, 1777 ],
+  "viewHeadingTiltFOV": [ 0, 66, 55 ],
+
+  "initialCircleRadius": 20,
+  "minCircleRadius": 0,
+  "maxCircleRadius": 100,
+  "circleRadiusUnit": "m",
+
+  "viewQualityProfile": "high",
+  "atmosphereEnabled": true,
+  "atmosphereQuality": "low",
+  "starsEnabled": true,
+
+  "viewHighlightColor": "1170d6",
+  "viewHighlightHaloOpacity": "0.7",
+  "viewHighlightFillOpacity": "0.7",
+
+  "popupPosition": "top-center",
+
+  "selectToolEnabled": true,
+  "selectToolOutFields": [
+    [ "Volume", "Volumen [m³]" ]
+  ],
+
+  "bookmarks": [
+    {
+      "name": "Gornji grad i Kaptol",
+      "viewLonLatElevation": [ 15.97442107, 45.80697122, 635.07382 ],
+      "viewHeadingTiltFOV": [ 8, 64, 55 ],
+      "selected": false
+    },
+    {
+      "name": "Donji Grad",
+      "viewLonLatElevation": [ 15.97893603, 45.79296206, 938.31334 ],
+      "viewHeadingTiltFOV": [ 2, 65, 55 ],
+      "selected": false
+    },
+    {
+      "name": "Trnje",
+      "viewLonLatElevation": [ 15.97961088, 45.77508258, 1609.76931 ],
+      "viewHeadingTiltFOV": [ 0, 56, 55 ],
+      "selected": false
+    },
+    {
+      "name": "Novi Zagreb",
+      "viewLonLatElevation": [ 15.97954955, 45.75148361, 1489.39164 ],
+      "viewHeadingTiltFOV": [ 0, 66, 55 ],
+      "selected": false
+    }
+  ],
+
+  "selectToolAnalysisOperations": [ "SUM", "AVG", "MAX", "MIN" ],
+
+  "selectToolAnalysisOperationalLabels": [ "Volumen [m³]" ],
+
+  "drawToolEnabled": false,
+
+  "measureToolEnabled": true,
+  "measureToolOutFields": [],
+
+  "solidEdge": {
+    "type": "solid",
+    "color": [ 0, 0, 0, 0.6 ],
+    "size": 1
+  },
+
+  "sketchEdge": {
+    "type": "sketch",
+    "color": [ 0, 0, 0, 1 ],
+    "size": 3,
+    "extensionLength": 10
+  },
+
+  "measureToolPointSymbol": {
+    "symbolLayers": [
+      {
+        "type": "icon",
+        "size": 16,
+        "resource": { "primitive": "square" },
+        "material": { "color": [ 0, 0, 0, 1.0 ] },
+        "outline": {
+          "color": [ 102, 204, 255, 1.0 ],
+          "size": 1
+        },
+        "anchor": "center"
+      },
+      {
+        "type": "text",
+        "font": {
+          "family": "monospace"
+        },
+        "material": { "color": [ 255, 255, 255, 1.0 ] },
+        "size": 12
+      }
+    ]
+  },
+  "measureToolLineSymbol": {
+    "symbolLayers": [
+      {
+        "type": "line",
+        "size": 2,
+        "material": { "color": [ 102, 204, 255, 1.0 ] }
+      }
+    ]
+  },
+
+  "selectToolPolygonSymbol": {
+    "color": [ 0, 0, 0, 0.5 ],
+    "style": "backward-diagonal",
+    "outline": {
+      "color": [ 102, 204, 255, 1 ],
+      "width": 1.5
+    }
+  },
+  "selectToolCircleSymbol": {
+    "color": [ 0, 0, 0, 0.5 ],
+    "style": "backward-diagonal",
+    "outline": {
+      "color": [ 102, 204, 255, 1 ],
+      "width": 1.5
+    }
+  },
+
+  "geometryServiceUrl": "https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer",
+  "projectionSpatialReferenceWkid": 3765,
+
+  "elevationLayerUrls": [ "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
+  "https://tiles.arcgis.com/tiles/Usi0jGQwMmBUpFjr/arcgis/rest/services/ZG_DTM_2024/ImageServer" ],
+
+  "layers": [
+    {
+      "url": "https://tiles-eu1.arcgis.com/6BlpNMAIwm2EjKih/arcgis/rest/services/ZG_Hillshade_2024/MapServer",
+      "type": "TileLayer",
+      "isTileLayer": true,
+      "title": "Sjenčani reljef",
+      "visible": true,
+      "opacity": 0.25,
+      "legendEnabled": false,
+      "listMode": "hide-children"
+    },
+    {
+      "title": "DOF500 2019",
+      "visible": false,
+      "opacity": 1,
+      "legendEnabled": false,
+      "visibilityMode": "independent",
+      "listMode": "hide-children",
+      "layers": [
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG_DOF2019/MapServer",
+          "type": "TileLayer",
+          "isTileLayer": true,
+          "title": "DOF-ovi pet ploha 2019",
+          "visible": true,
+          "opacity": 1,
+          "legendEnabled": false,
+          "listMode": "hide-children"
+        },
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG_UAV_DOF_2020_SveticeMaksimir/MapServer",
+          "type": "TileLayer",
+          "isTileLayer": true,
+          "title": "DOF Svetice-Maksimir 2020",
+          "visible": true,
+          "opacity": 1,
+          "legendEnabled": false,
+          "listMode": "hide-children"
+        }
+      ]
+    },
+    {
+      "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_Vode_2023/FeatureServer/0",
+      "type": "FeatureLayer",
+      "title": "Vodene površine - vizualizacija 2023",
+      "visible": true,
+      "opacity": 1,
+      "legendEnabled": true,
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "type": "polygon-3d",
+          "symbolLayers": [
+            {
+              "type": "water",
+              "waveDirection": 260,
+              "color": "#74ccf4",
+              "waveStrength": "moderate",
+              "waterbodySize": "small"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/arcgis/rest/services/GZG/FeatureServer/1",
+      "type": "FeatureLayer",
+      "title": "Granica Grada Zagreba",
+      "outFields": [ "*" ],
+      "visible": false,
+      "opacity": 1,
+      "legendEnabled": false,
+      "renderer" : {
+            "type" : "simple" ,
+            "symbol" : {
+              "type" : "simple-fill" ,
+              "outline" : { "color" : [ 0 , 60 , 115 , 1.0 ], "width" : 4 },
+              "color" : [ 0 , 0 , 0 , 0 ],
+              "size" : 1 }
+            }
+    },
+    {
+      "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/ArcGIS/rest/services/Urbanisticka_podrucja/FeatureServer/0",
+      "type": "FeatureLayer",
+      "title": "Granice GUP-ova grada Zagreba i Sesveta",
+      "outFields": [ "*" ],
+      "visible": false,
+      "opacity": 1,
+      "legendEnabled": false,
+      "renderer": {
+        "type": "unique-value",
+        "field": "IME_ZUPANI",
+        "uniqueValueInfos": [
+          {"value": "GUP ZG", "symbol": {"type" : "simple-fill", "outline" : { "color" : [ 114, 178, 255, 1.0 ], "width" : 2 }, "color" : [ 0 , 0 , 0 , 0 ]}},
+          {"value": "GUP SE", "symbol": {"type" : "simple-fill", "outline" : { "color" : [ 114, 178, 255, 1.0 ], "width" : 2 }, "color" : [ 0 , 0 , 0 , 0 ]}}
+      ]
+    }
+    },
+    {
+      "title": "Statistika",
+      "visible": false,
+      "opacity": 0.85,
+      "legendEnabled": true,
+      "visibilityMode": "independent",
+      "listMode": "show",
+      "layers":
+      [
+        {
+          "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/ArcGIS/rest/services/MO_2021_ZG3D/FeatureServer/0",
+          "type": "FeatureLayer",
+          "title": "Mjesni odbori - Popis 2021",
+          "outFields": [ "*" ],
+          "hasLabel": "True",
+          "renderer" : {
+            "type" : "simple" ,
+            "symbol" : {
+              "type" : "simple-fill" ,
+              "outline" : { "color" : [ 255 , 0 , 255 , 1.0 ], "width" : 1.5 },
+              "color" : [ 0 , 0 , 0 , 0 ],
+              "size" : 1 }
+            },
+          "labelConfig": {
+            "minScale": 0,
+            "maxScale": 25.5,
+            "symbol": {
+              "type": "text",
+              "color": "#72029e",
+              "haloColor": "white",
+              "haloSize": 1.5,
+              "font": {
+                "family": "Noto Sans",
+                "size": 10
+              }
+            },
+            "labelPlacement": "center-center",
+            "labelExpression": "M. O. [JMS_IME]\n[Ukupno_stanovnici] st."
+          },
+          "buttonOnColor": "#8D4DB3",
+          "buttonOffColor": "#CCCCCC",
+          "popupDisplayFields": {
+            "JMS_IME": {
+              "label": "Mjesni odbor"
+            },
+            "IME_GC": {
+              "label": "Gradska četvrt"
+            },
+            "Ukupno_stanovnici": {
+              "label": "Ukupno - stanovnici"
+            },
+            "god_0_14": {
+              "label": "Godina 0-14"
+            },
+            "god_65_i_vise": {
+              "label": "Godina 65 i više"
+            }
+          },
+          "visible": false,
+          "opacity": 1
+        },
+        {
+          "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/ArcGIS/rest/services/GC_2021_ZG3D/FeatureServer/0",
+          "type": "FeatureLayer",
+          "title": "Gradske četvrti – Popis 2021",
+          "outFields": [ "*" ],
+          "hasLabel": "True",
+          "renderer" : {
+            "type" : "simple" ,
+            "symbol" : {
+              "type" : "simple-fill" ,
+              "outline" : { "color" : [ 0 , 0 , 0 , 1.0 ], "width" : 2.5 },
+              "color" : [ 0 , 0 , 0 , 0 ],
+              "size" : 1 }
+            },
+          "labelConfig": {
+            "minScale": 0,
+            "maxScale": 25.5,
+            "symbol": {
+              "type": "text",
+              "color": "black",
+              "haloColor": "white",
+              "haloSize": 1.5,
+              "font": {
+                "family": "Noto Sans",
+                "size": 12
+              }
+            },
+            "labelPlacement": "center-center",
+            "labelExpression": "G. Č. [JMS_IME]\n[Ukupno_stanovnici] st."
+          },
+          "buttonOnColor": "#424949",
+          "buttonOffColor": "#CCCCCC",
+          "popupDisplayFields": {
+            "JMS_IME": {
+              "label": "Gradska četvrt"
+            },
+            "Ukupno_stanovnici": {
+              "label": "Ukupno - stanovnici"
+            },
+            "god_0_6": {
+              "label": "Godina 0-6"
+            },
+            "god_0_14": {
+              "label": "Godina 0-14"
+            },
+            "god_65_i_vise": {
+              "label": "Godina 65 i više"
+            },
+            "Prosjecna_starost": {
+              "label": "Prosječna starost"
+            },
+            "Ukupno_kucanstva": {
+              "label": "Ukupno - kućanstva"
+            }
+          },
+          "visible": false,
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "title": "Nestabilne padine",
+      "visible": false,
+      "opacity": 1,
+      "legendEnabled": true,
+      "layers": [
+        {
+          "url": "https://age.gdi.net/server/rest/services/ZG3D_2023/ZG3D_2019_Klizista/MapServer",
+          "sublayers": [
+            {
+              "id": "0",
+              "visible": true,
+              "popupEnabled": false
+            },
+            {
+              "id": "1",
+              "visible": true,
+              "popupEnabled": false
+            }
+          ],
+          "type": "MapImageLayer",
+          "title": "Nestabilne padine",
+          "legendEnabled": true,
+          "visible": true,
+          "opacity": 1,
+          "listMode": "hide-children"
+        },
+        {
+          "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_2D_2019/FeatureServer/7",
+          "type": "FeatureLayer",
+          "title": "Nestabilne padine - klizište",
+          "legendEnabled": false,
+          "opacity": 0,
+          "listMode": "hide-children",
+          "outFields": [ "*" ],
+          "popupDisplayFields": {
+            "POJAVA": {
+              "label": "Pojava"
+            },
+            "TIP_POKREN": {
+              "label": "Tip pokrenutog materijala"
+            },
+            "IZRAZAJ_KL": {
+              "label": "Izražajnost klizišta"
+            },
+            "SMJESTAJ_N": {
+              "label": "Smještaj klizišta na padini"
+            },
+            "TIP_KLIZAN": {
+              "label": "Tip klizanja"
+            },
+            "STADIJ_KLI": {
+              "label": "Stadij klizišta"
+            },
+            "STAROST": {
+              "label": "Starost klizišta"
+            },
+            "DUB_KLIZ_P": {
+              "label": "Dubina klizne plohe"
+            },
+            "verzija": {
+              "label": "Verzija"
+            },
+            "ORIG_FID": {
+              "label": "ID klizišta"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_LOD2_kult_zonaA/SceneServer/layers/0/",
+      "type": "SceneLayer",
+      "title": "3D zaštićena kulturna dobra – Gornji grad",
+      "visible": false,
+      "opacity": 1,
+      "legendEnabled": true,
+      "defaultEdge": "solid",
+      "availableEdges": [ "no-edge", "sketch", "solid" ],
+      "outFields": [ "*" ],
+      "renderer": {
+        "type": "unique-value",
+        "field": "grad",
+        "uniqueValueInfos": [
+          {
+            "value": "GRAD ZAGREB", "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#269cca", "colorMixMode": "replace" }}]},
+            "label": "Zaštićeno kulturno dobro"
+          },
+          {
+            "value": " ", "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#FFFFFF", "colorMixMode": "replace" }}]},
+            "label": "Ostalo"
+          }
+        ]
+        }
+    },
+    {
+      "title": "Arhitektura i urbanizam",
+      "visible": false,
+      "opacity": 0.85,
+      "legendEnabled": true,
+      "visibilityMode": "independent",
+      "listMode": "show",
+      "layers":
+      [
+        {
+          "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/arcgis/rest/services/ZG3D_UPU_i/FeatureServer/0",
+          "type": "FeatureLayer",
+          "title": "Urbanistički planovi uređenja",
+          "outFields": [ "*" ],
+          "popupDisplayFields": {
+            "Naziv": {
+              "label": "Naziv"
+            },
+            "Status": {
+              "label": "Status"
+            },
+            "SluzbenoGlasilo": {
+              "label": "SGGZ"
+            },
+            "PlanVisegReda": {
+              "label": "Plan višeg reda"
+            },
+            "Tema": {
+              "label": "Tema (prema mjerama iz odluke)"
+            },
+            "Izradivac": {
+              "label": "Izradivac"
+            },
+            "Pretezitost": {
+              "label": "Pretežita namjena"
+            },
+            "SveNamjene": {
+              "label": "Sve namjene"
+            },
+            "BrojStanova": {
+              "label": "Broj stanova (planiran)"
+            },
+            "BrojStanovnika": {
+              "label": "Broj stanovnika (planiran)"
+            }
+          },
+          "visible": false,
+          "opacity": 0.8
+        },
+        {
+          "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/arcgis/rest/services/Geoportal_planirana_namjena/FeatureServer/0",
+          "type": "FeatureLayer",
+          "title": "Planirana namjena površina",
+          "visible": false,
+          "opacity": 0.45,
+          "legendEnabled": true,
+          "outFields": [ "*" ],
+          "popupDisplayFields": {
+            "Namjena": {
+              "label": "Namjena"
+            },
+            "Analitika": {
+              "label": "Analitika"
+            },
+            "Naziv_plana": {
+              "label": "Naziv plana"
+            },
+            "Izradivac_plana": {
+              "label": "Izrađivač plana"
+            },
+            "Godina_zadnje_izmjene ": {
+              "label": "Godina zadnje izmjene "
+            }
+          }
+        },
+        {
+          "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG_UPU3D_2019/SceneServer/layers/0/",
+          "type": "SceneLayer",
+          "title": "3D Urbanistički planovi uređenja",
+          "defaultEdge": "no-edge",
+          "availableEdges": [ "no-edge", "sketch", "solid" ],
+          "visible": false,
+          "opacity": 0.40,
+          "castShadows": false,
+          "legendEnabled": true,
+          "popupDisplayFields": {
+            "plan_": {
+              "label": "Naziv UPU-a"
+            },
+            "TEXT_": {
+              "label": "Oznaka namjene"
+            },
+            "namjena": {
+              "label": "Namjena"
+            },
+            "kazeta": {
+              "label": "Oznaka kazete"
+            },
+            "katnost": {
+              "label": "Max. br. etaža"
+            },
+            "SGGZ": {
+              "label": "SGGZ"
+            }
+          }
+        },
+        {
+          "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_NATJECAJI_2017/SceneServer/layers/0/",
+          "type": "SceneLayer",
+          "title": "3D primjeri natječajnih rješenja",
+          "legendEnabled": true,
+          "defaultEdge": "no-edge",
+          "availableEdges": [ "no-edge", "sketch", "solid" ],
+          "symbolLayers": [
+            {
+              "edges": {
+                "type": "sketch",
+                "color": [ 250, 0, 0, 1 ],
+                "size": 3,
+                "extensionLength": 10
+              }
+            }
+          ],
+          "popupDisplayFields": {
+            "OZNAKA": {
+              "label": "Oznaka"
+            },
+            "KR_NAZ_LOK": {
+              "label": "Kratki naziv - lokacija"
+            },
+            "Puni_naziv_natječaja": {
+              "label": "Puni naziv natječaja"
+            },
+            "Planska_namjena": {
+              "label": "Planska namjena"
+            },
+            "Namjena_objekta": {
+              "label": "Namjena objekta"
+            },
+            "Tekstualni_opis_autora___opis_r": {
+              "label": "Tekstualni opis autora / Opis rada"
+            },
+            "Link_na_stranicu": {
+              "label": "Link na stranicu"
+            },
+            "Vrsta_natječaja": {
+              "label": "Vrsta natječaja"
+            },
+            "Trajanje_natječaja": {
+              "label": "Trajanje natječaja"
+            },
+            "Provoditelj": {
+              "label": "Provoditelj"
+            },
+            "Investitor": {
+              "label": "Investitor"
+            },
+            "Broj_pristiglih_radova": {
+              "label": "Broj pristiglih radova"
+            },
+            "Prva_nagrada___iznos": {
+              "label": "Prva nagrada - iznos"
+            },
+            "Površina_parcele___obuhvata": {
+              "label": "Površina parcele - obuhvata"
+            },
+            "Ocjenjivački_sud": {
+              "label": "Ocjenjivački sud"
+            },
+            "F1__nagrada": {
+              "label": "1. nagrada"
+            },
+            "Površina_zgrade": {
+              "label": "Površina zgrade",
+              "format": {
+                "digitSeparator": true,
+                "places": 1
+              }
+            },
+            "Obrazloženje_os_prvonagrađeno": {
+              "label": "Obrazloženje OS prvonagrađenog rada"
+            },
+            "Status": {
+              "label": "Status"
+            }
+          }
+        },
+        {
+          "url": "https://services8.arcgis.com/Usi0jGQwMmBUpFjr/arcgis/rest/services/ZG3D_javni_natjecaj/FeatureServer/0",
+          "type": "FeatureLayer",
+          "title": "Arhitektonsko-urbanistički natječaji",
+          "outFields": [ "*" ],
+          "popupDisplayFields": {
+            "OZNAKA": {
+              "label": "Oznaka"
+            },
+            "KR_NAZ_LOK": {
+              "label": "Kratki naziv - lokacija"
+            },
+            "NAMJENA_OB": {
+              "label": "Namjena objekta"
+            },
+            "STATUS_": {
+              "label": "Status"
+            },
+            "STATUS_NATJECAJA": {
+              "label": "Status natjecaja"
+            }
+          },
+          "opacity": 0.8,
+          "legendEnabled": true,
+          "elevationInfo": "relative-to-scene",
+          "renderer": {
+            "type": "unique-value",
+            "field": "NAMJENA_OB",
+            "uniqueValueInfos": [
+              {
+                "value": "MJEŠOVITA NAMJENA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 255, 64, 0 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "DRUŠTVENA INFRASTRUKTURA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 255, 0, 2 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "STAMBENA NAMJENA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 255, 217, 0 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "GOSPODARSKA NAMJENA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 153, 0, 255 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "INFRASTRUKTURA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 0, 128, 255 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "GROBLJA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 205, 187, 121 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "SPORT I REKREACIJA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 0, 255, 24 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "value": "ZELENA INFRASTRUKTURA",
+                "symbol": {
+                  "type": "point-3d",
+                  "symbolLayers": [
+                    {
+                      "type": "icon",
+                      "resource": { "primitive": "circle" },
+                      "material": { "color": [ 104, 104, 104 ] },
+                      "size": 15
+                    }
+                  ],
+                  "verticalOffset": {
+                    "screenLength": 40,
+                    "maxWorldLength": 100,
+                    "minWorldLength": 20
+                  },
+                  "callout": {
+                    "type": "line",
+                    "size": 1.5,
+                    "color": "white",
+                    "border": {
+                      "color": "black"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_Cvjetni_3D_mesh/SceneServer/layers/0/",
+      "type": "IntegratedMeshLayer",
+      "title": "3D mesh vizualizacija",
+      "opacity": 0.85,
+      "visible": false
+    },
+    {
+      "title": "3D oblaci točaka",
+      "type": "PointCloudLayer",
+      "visible": false,
+      "opacity": 0.85,
+      "legendEnabled": true,
+      "visibilityMode": "independent",
+      "listMode": "show",
+      "layers": [
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/MalaMlakaOdra_LASD/SceneServer/0/",
+          "type": "PointCloudLayer",
+          "isPointCloudLayer": true,
+          "title": "3D oblak točaka 2022",
+          "visible": false,
+          "hasRenderer": true,
+          "pointSizes": {
+            "min": 1,
+            "max": 15,
+            "init": 7
+          },
+          "pointDensity": {
+            "min": 1,
+            "max": 40,
+            "init": 25
+          },
+
+          "availableRenderes": [
+            {
+              "name": "RGB",
+              "title": "RGB boje"
+            },
+            {
+              "name": "CLASS_CODE",
+              "title": "LiDAR klase"
+            }
+          ]
+        },
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_Park_Slobostina_pointCloud/SceneServer/0/",
+          "type": "PointCloudLayer",
+          "title": "Park Novi Zagreb - dio 2016",
+          "isPointCloudLayer": true,
+          "visible": true,
+          "pointSizes": {
+            "min": 1,
+            "max": 15,
+            "init": 7
+          },
+          "pointDensity": {
+            "min": 1,
+            "max": 40,
+            "init": 25
+          }
+        },
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/P3_Vrbani_2019_lasd/SceneServer/0/",
+          "type": "PointCloudLayer",
+          "title": "Vrbani 2019",
+          "isPointCloudLayer": true,
+          "visible": true,
+          "pointSizes": {
+            "min": 1,
+            "max": 15,
+            "init": 7
+          },
+          "pointDensity": {
+            "min": 1,
+            "max": 40,
+            "init": 25
+          }
+        },
+        {
+          "title": "Trnje 2019",
+          "visible": true,
+          "opacity": 0.85,
+          "legendEnabled": false,
+          "visibilityMode": "independent",
+          "listMode": "hide-children",
+          "layers": [
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/P4_Trnje_2019_lasd/SceneServer/0/",
+              "type": "PointCloudLayer",
+              "title": "Trnje Kruge",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            },
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/P2_Strojarska_2019_lasd/SceneServer/0/",
+              "type": "PointCloudLayer",
+              "title": "Strojarska",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            }
+          ]
+        },
+        {
+          "title": "Novi Zagreb 2019",
+          "visible": true,
+          "opacity": 0.85,
+          "legendEnabled": false,
+          "visibilityMode": "independent",
+          "listMode": "hide-children",
+          "layers": [
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/P1_Velesajam_2019_lasd/SceneServer/0/",
+              "type": "PointCloudLayer",
+              "title": "Velesajam",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            },
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/P5_Slobostina_2019_lasd/SceneServer/0/",
+              "type": "PointCloudLayer",
+              "title": "Slobostina",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            }
+          ]
+        },
+        {
+          "title": "Svetice – Maksimir 2019",
+          "visible": true,
+          "opacity": 0.85,
+          "legendEnabled": false,
+          "visibilityMode": "independent",
+          "listMode": "hide-children",
+          "layers": [
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/SveticeMaksimirPointCloud_part_1_las/SceneServer/layers/0/",
+              "type": "PointCloudLayer",
+              "title": "Dinamo 1/4",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            },
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/SveticeMaksimirPointCloud_part_2_las/SceneServer/layers/0/",
+              "type": "PointCloudLayer",
+              "title": "Dinamo 2/4",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            },
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/SveticeMaksimirPointCloud_part_3_las/SceneServer/layers/0/",
+              "type": "PointCloudLayer",
+              "title": "Dinamo 3/4",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            },
+            {
+              "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/SveticeMaksimirPointCloud_part_4_las/SceneServer/layers/0/",
+              "type": "PointCloudLayer",
+              "title": "Dinamo 4/4",
+              "isPointCloudLayer": true,
+              "visible": true,
+              "pointSizes": {
+                "min": 1,
+                "max": 15,
+                "init": 7
+              },
+              "pointDensity": {
+                "min": 1,
+                "max": 40,
+                "init": 25
+              }
+            }
+          ]
+        },
+        {
+          "url": "https://tiles.arcgis.com/tiles/srGsjgmVH7sYUOi4/arcgis/rest/services/ZAGREB_Cvjetno_DOF_point_cloud_las/SceneServer/layers/0/",
+          "type": "PointCloudLayer",
+          "title": "Ilica - Gundulićeva – Varšavska - Margaretska 2020",
+          "isPointCloudLayer": true,
+          "visible": true,
+          "pointSizes": {
+            "min": 1,
+            "max": 15,
+            "init": 7
+          },
+          "pointDensity": {
+            "min": 1,
+            "max": 40,
+            "init": 25
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_stabla_2020/FeatureServer",
+      "type": "FeatureLayer",
+      "title": "3D stabla - Katastar zelenila",
+      "outFields": [ "*" ],
+      "popupDisplayFields": {
+        "latinski_n": {
+          "label": "Latinski naziv"
+        },
+        "hrvatski_n": {
+          "label": "Hrvatski naziv"
+        }
+      },
+      "visible": true,
+      "opacity": 0.85,
+      "legendEnabled": false,
+      "renderer": {
+        "type": "unique-value",
+        "field": "latin1",
+        "defaultSymbol": {
+            "type": "web-style",
+            "name": "Acer",
+            "styleName": "EsriThematicTreesStyle",
+            "material": {
+              "color": "red"
+            }
+          },
+          "visualVariables": [
+            {
+              "type": "size",
+              "valueUnit": "meters",
+              "axis": "height",
+              "field": "height"
+            },
+            {
+              "type": "size",
+              "valueUnit": "meters",
+              "axis": "width",
+              "field": "width"
+            }
+          ],
+        "uniqueValueInfos": [
+          {
+            "value": "GenericDead", "symbol": {"type": "web-style", "name": "GenericDead", "styleName": "EsriThematicTreesStyle", "color": "#74ccf4"}
+          },
+          {"value": "Abies", "symbol": {"type": "web-style", "name": "Abies", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Acer", "symbol": {"type": "web-style", "name": "Acer", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Aesculus", "symbol": {"type": "web-style", "name": "Aesculus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Alnus", "symbol": {"type": "web-style", "name": "Alnus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Betula", "symbol": {"type": "web-style", "name": "Betula", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Buxus", "symbol": {"type": "web-style", "name": "Buxus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Calocedrus", "symbol": {"type": "web-style", "name": "Calocedrus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Castanea", "symbol": {"type": "web-style", "name": "Castanea", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Cornus", "symbol": {"type": "web-style", "name": "Cornus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Crataegus", "symbol": {"type": "web-style", "name": "Crataegus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Cupressus", "symbol": {"type": "web-style", "name": "Cupressus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Fagus", "symbol": {"type": "web-style", "name": "Fagus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Fraxinus", "symbol": {"type": "web-style", "name": "Fraxinus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Juglans", "symbol": {"type": "web-style", "name": "Juglans", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Juniperus", "symbol": {"type": "web-style", "name": "Juniperus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Larix", "symbol": {"type": "web-style", "name": "Larix", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Laurus", "symbol": {"type": "web-style", "name": "Laurus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Ligustrum", "symbol": {"type": "web-style", "name": "Ligustrum", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Liquidambar", "symbol": {"type": "web-style", "name": "Liquidambar", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Magnolia", "symbol": {"type": "web-style", "name": "Magnolia", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Picea", "symbol": {"type": "web-style", "name": "Picea", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Pinus", "symbol": {"type": "web-style", "name": "Pinus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Platanus", "symbol": {"type": "web-style", "name": "Platanus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Populus", "symbol": {"type": "web-style", "name": "Populus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Prunus", "symbol": {"type": "web-style", "name": "Prunus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Pseudotsuga", "symbol": {"type": "web-style", "name": "Pseudotsuga", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Quercus", "symbol": {"type": "web-style", "name": "Quercus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Rhamnus", "symbol": {"type": "web-style", "name": "Rhamnus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Robinia", "symbol": {"type": "web-style", "name": "Robinia", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Salix", "symbol": {"type": "web-style", "name": "Salix", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Sequoia", "symbol": {"type": "web-style", "name": "Sequoia", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Sequoiadendron", "symbol": {"type": "web-style", "name": "Sequoiadendron", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Sorbus", "symbol": {"type": "web-style", "name": "Sorbus", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Taxodium", "symbol": {"type": "web-style", "name": "Taxodium", "styleName": "EsriThematicTreesStyle"}},
+          {"value": "Tilia", "symbol": {"type": "web-style", "name": "Tilia", "styleName": "EsriThematicTreesStyle", "color": "#74ccf4"}, "color": "#74ccf4"},
+          {"value": "Ulmus", "symbol": {"type": "web-style", "name": "Ulmus", "styleName": "EsriThematicTreesStyle"}}
+      ]
+    }
+    },
+    {
+      "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/Petlja_mostovi_2023_v1/SceneServer/0/",
+      "type": "SceneLayer",
+      "title": "3D mostovi",
+      "defaultEdge": "none",
+      "visible": true,
+      "opacity": 1,
+      "outFields": [ "*" ],
+      "legendEnabled": false,
+      "castShadows": true,
+      "renderer": {
+        "type": "simple",
+        "symbol": {
+          "type": "mesh-3d",
+          "symbolLayers": [{"type": "fill","material": { "color": "#c4c4c4", "colorMixMode": "replace" }}]
+        }
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/srGsjgmVH7sYUOi4/arcgis/rest/services/ZG3D_LOD2_2024/SceneServer/layers/0/",
+      "type": "SceneLayer",
+      "title": "3D zgrade",
+      "hasRenderer": true,
+      "visible": true,
+      "opacity": 0.9,
+      "legendEnabled": true,
+      "defaultEdge": "solid",
+      "availableEdges": [
+          "no-edge",
+          "sketch",
+          "solid"
+      ],
+      "switchRenderer": "radio",
+      "outFields": [
+          "*"
+      ],
+      "renderers": [
+          {
+              "type": "unique-value",
+              "field": "Skupno_kor",
+              "title": "Početne postavke",
+              "buttonColor": "#F2B456",
+              "uniqueValueInfos": [
+                  {
+                      "value": "Javne i društvene površine",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#AFAFAF"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Javne i društvene površine"
+                  },
+                  {
+                      "value": "Sport i rekreacija",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#bcbcbc"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Sport i rekreacija"
+                  },
+                  {
+                      "value": "Brownfield površine",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Brownfield površine"
+                  },
+                  {
+                      "value": "Gospodarstvo",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Gospodarstvo"
+                  },
+                  {
+                      "value": "Groblja",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Groblja"
+                  },
+                  {
+                      "value": "Javne zelene površine",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Javne zelene površine"
+                  },
+                  {
+                      "value": "Komunalna infrastruktura",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Komunalna infrastruktura"
+                  },
+                  {
+                      "value": "Poljoprivredne i neuređene površine, zaštitno zelenilo, ostalo",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Poljoprivredne i neuređene površine, zaštitno zelenilo, ostalo"
+                  },
+                  {
+                      "value": "Površine posebne namjene",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Površine posebne namjene"
+                  },
+                  {
+                      "value": "Promet",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Promet"
+                  },
+                  {
+                      "value": "Stambene i mješovite površine",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Stambene i mješovite površine"
+                  },
+                  {
+                      "value": "Vode i vodna dobra",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Vode i vodna dobra"
+                  },
+                  {
+                      "value": "Šume",
+                      "symbol": {"type": "mesh-3d","symbolLayers": [{"type": "fill","material": {"color": "#ffffff"},"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                      "label": "Šume"
+                  }
+              ]
+          },
+          {
+              "type": "unique-value",
+              "field": "Skupno_kor",
+              "title": "Stvarno korištenje",
+              "buttonColor": "#2fB456",
+              "uniqueValueInfos": [
+                  {
+                  "value": "Javne i društvene površine",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#FF0000", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Javno i društveno"
+                  },
+                  {
+                  "value": "Sport i rekreacija",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#98E600", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Sport i rekreacija"
+                  },
+                  {
+                  "value": "Brownfield površine",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#732600", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Brownfield"
+                  },
+                  {
+                  "value": "Gospodarstvo",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#BE88DB", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Gospodarstvo"
+                  },
+                  {
+                  "value": "Groblja",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#3A3A3A", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Groblja"
+                  },
+                  {
+                  "value": "Javne zelene površine",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Javne zelene površine"
+                  },
+                  {
+                  "value": "Komunalna infrastruktura",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#CFC8A9", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Komunalna infrastruktura"
+                  },
+                  {
+                  "value": "Poljoprivredne i neuređene površine, zaštitno zelenilo, ostalo",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Poljoprivredne i neuređene površine, zaštitno zelenilo, ostalo"
+                  },
+                  {
+                  "value": "Površine posebne namjene",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#FF00FF", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Površine posebne namjene"
+                  },
+                  {
+                  "value": "Promet",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Promet"
+                  },
+                  {
+                  "value": "Stambene i mješovite površine",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Stambene i mješovite površine"
+                  },
+                  {
+                  "value": "Vode i vodna dobra",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Vode i vodna dobra"
+                  },
+                  {
+                  "value": "Šume",
+                  "symbol": {"type": "mesh-3d", "symbolLayers": [{"type": "fill","material": { "color": "#ffffff", "colorMixMode": "replace" },"edges": {"type": "solid","color": [50,50,50,0.5],"size": 1}}]},
+                  "label": "Šume"
+                  }
+            ]
+          }
+      ],
+      "popupDisplayFields": {
+          "Volume": {
+              "label": "Volumen [m³]",
+              "format": {
+                  "digitSeparator": true,
+                  "places": 1
+              }
+          },
+          "Z_Max": {
+              "label": "Z max [m]",
+              "format": {
+                  "digitSeparator": true,
+                  "places": 1
+              }
+          },
+          "Z_Min": {
+              "label": "Z min [m]",
+              "format": {
+                  "digitSeparator": true,
+                  "places": 1
+              }
+          },
+          "Z_Delta": {
+              "label": "Relativna visina [m]",
+              "format": {
+                  "digitSeparator": true,
+                  "places": 1
+              }
+          },
+          "SArea": {
+              "label": "Oplošje [m²]",
+              "format": {
+                  "digitSeparator": true,
+                  "places": 1
+              }
+          },
+          "Izvor": {
+              "label": "Izvor"
+          },
+          "Godina_izv": {
+              "label": "Godina podrijetla izvora"
+          },
+          "Koristenje": {
+              "label": "Korištenje"
+          },
+          "Skupno_kor": {
+              "label": "Skupno korištenje"
+          }
+      }
+    }
+  ]
+}

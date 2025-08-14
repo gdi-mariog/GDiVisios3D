@@ -1,0 +1,139 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+
+  h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.main {
+  padding: 40px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.demo-section {
+  h2 {
+    color: #1f2937;
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+}
+
+.demo-item {
+  margin-bottom: 40px;
+  padding: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  h3 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  p {
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+}
+
+.logo-demos {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.modal-demos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.demo-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+
+  &.primary {
+    background-color: #3b82f6;
+    color: white;
+
+    &:hover {
+      background-color: #2563eb;
+    }
+  }
+
+  &.secondary {
+    background-color: #6b7280;
+    color: white;
+
+    &:hover {
+      background-color: #4b5563;
+    }
+  }
+
+  &:not(.primary):not(.secondary) {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+
+    &:hover {
+      background-color: #e5e7eb;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .main {
+    padding: 20px 15px;
+  }
+
+  .demo-item {
+    padding: 20px;
+  }
+
+  .logo-demos {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,119 @@
+.slice-widget-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      min-width: 220px;
+      max-width: 300px;
+    }
+
+    .slice-widget-container:not(.widget-visible) {
+      display: none;
+    }
+
+    .slice-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .slice-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #007acc;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .slice-btn:hover {
+      background: #005a9e;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .slice-btn.active {
+      background: #28a745;
+    }
+
+    .slice-btn.clear-btn {
+      background: #dc3545;
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+
+    .slice-btn.clear-btn:hover {
+      background: #c82333;
+    }
+
+    .slice-icon {
+      font-size: 16px;
+    }
+
+    .slice-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .slice-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #333;
+      cursor: pointer;
+      padding: 2px 0;
+    }
+
+    .slice-option:hover {
+      color: #007acc;
+    }
+
+    .slice-option input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: #007acc;
+    }
+
+    .slice-shape-select {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 13px;
+      background: white;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .slice-shape-select:focus {
+      outline: none;
+      border-color: #007acc;
+      box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+    }
+
+    .arcgis-slice-component {
+      /* Hide the default ArcGIS component UI since we're using custom controls */
+      visibility: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
