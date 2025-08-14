@@ -8,34 +8,51 @@ import ElevationLayer from '@arcgis/core/layers/ElevationLayer';
 
 @Injectable({ providedIn: 'root' })
 export class ArcGisService {
-  map = new Map({ basemap: 'streets-vector' });
+  map?: Map;
   view?: MapView;
 
-  async init(container: HTMLDivElement, center: number[] = [0,0], zoom = 2) {
+  async init(map: Map, container: HTMLDivElement, center: number[] = [0,0], zoom = 2) {
+    this.map = map;
     this.view = new MapView({ container, map: this.map, center, zoom });
+
     return this.view.when();
   }
 
+  isMapInitialized(): boolean {
+    return !!this.map;
+  }
+
   addFeatureLayer(url: string, opts: Partial<__esri.FeatureLayerProperties> = {}): FeatureLayer {
+
+    if (!this.map) throw new Error('Map not initialized');
+
     const layer = new FeatureLayer({ url, ...opts });
     this.map.add(layer);
+
     return layer;
   }
 
   addGraphicsLayer(): GraphicsLayer {
+    if (!this.map) throw new Error('Map not initialized');
+
     const layer = new GraphicsLayer();
     this.map.add(layer);
+
     return layer;
   }
 
   addElevationLayer(url: string, opts: Partial<__esri.ElevationLayerProperties> = {}): ElevationLayer {
+    if (!this.map) throw new Error('Map not initialized');
+
     const layer = new ElevationLayer({ url, ...opts });
     this.map.add(layer);
+    
     return layer;
   }
 
   watchUpdating(cb: (updating: boolean) => void) {
     if (!this.view) return;
+
     return reactiveUtils.watch(
       () => this.view!.updating,
       (u) => cb(u)
