@@ -41,9 +41,111 @@ export interface AppConfig {
   basemap: string;
   layerListGoToFullExtentButtonsEnabled: boolean;
 
-  camera?: CameraConfig;
+  initialDateTime: string;
+  shadowsEnabled: boolean;
+  waterReflection: boolean;
+  ambientOcclusionEnabled: boolean;
+  viewLonLatElevation: number[];
+  viewHeadingTiltFOV: number[];
+
+  initialCircleRadius: number;
+  minCircleRadius: number;
+  maxCircleRadius: number;
+  circleRadiusUnit: string;
+
+  viewQualityProfile: string;
+  atmosphereEnabled: boolean;
+  atmosphereQuality: string;
+  starsEnabled: boolean;
+
+  viewHighlightColor: string;
+  viewHighlightHaloOpacity: string;
+  viewHighlightFillOpacity: string;
+
+  popupPosition: string;
+
+  selectToolEnabled: boolean;
+  selectToolOutFields: string[];
+
   bookmarks?: BookmarkConfig[];
+
+  selectToolAnalysisOperations: string[];
+
+  selectToolAnalysisOperationalLabels: string[];
+
+  drawToolEnabled: boolean;
+
+  measureToolEnabled: boolean;
+  measureToolOutFields: [];
+
+  solidEdge: EdgeConfig;
+  sketchEdge: EdgeConfig;
+
+  measureToolPointSymbol: {
+    symbolLayers: SymbolLayerConfig[];
+  };
+  measureToolLineSymbol: {
+    symbolLayers: SymbolLayerConfig[];
+  };
+
+  selectToolPolygonSymbol: SymbolConfig;
+  selectToolCircleSymbol: SymbolConfig;
+
+  geometryServiceUrl: string;
+  projectionSpatialReferenceWkid: number;
+  elevationLayerUrls: string[];
+
   layers: LayerConfig[];
+
+  camera?: CameraConfig;
+}
+
+export interface BookmarkConfig {
+  name: string;
+  viewLonLatElevation: number[];
+  viewHeadingTiltFOV: number[];
+  selected: boolean;
+}
+
+export interface EdgeConfig {
+  type: string;
+  color: number[];
+  size: number;
+  extensionLength?: number;
+}
+
+export interface MaterialConfig {
+  color: number[];
+}
+
+export interface ResourceConfig {
+  primitive: string;
+}
+
+export interface OutlineConfig {
+  color: number[];
+  size?: number;
+  width?: number;
+}
+
+export interface FontConfig {
+  family: string;
+}
+
+export interface SymbolConfig {
+    color: number[];
+    style: string;
+    outline: OutlineConfig;
+}
+
+export interface SymbolLayerConfig {
+  type: string;
+  size: number;
+  material: MaterialConfig;
+  resource?: ResourceConfig;
+  outline?: OutlineConfig;
+  anchor?:string;
+  font?:FontConfig;
 }
 
 export interface CameraConfig {
@@ -57,31 +159,74 @@ export interface CameraConfig {
   tilt: number;
 }
 
-export interface BookmarkConfig {
-  name: string;
-  viewpoint: {
-    camera: CameraConfig;
-  };
+export interface LabelFormatConfig {
+  digitSeparator: boolean;
+  places: number;
 }
 
-export interface LayerConfig {
+export interface LabelConfig {
+  label: string;
+  format?: LabelFormatConfig;
+}
+
+export interface SublayerConfig {
   id: string;
-  title: string;
-  url?: string;
-  type: string;
   visible: boolean;
-  popupEnabled?: boolean;
-  elevationInfo?: any;
-  renderer?: any;
+  popupEnabled: boolean;
+}
+
+export interface PointConfig {
+  min: number;
+  max: number;
+  init: number;
+}
+
+
+export interface LayerConfig {
+  id?: string;
+
+  title: string;
+  opacity: number;
+  visible: boolean;
+  listMode: string;
+
+  type?: string;
+  url?: string;
+  isTileLayer?: boolean;
+  legendEnabled?: boolean;
+  visibilityMode?: string;
+
   layers?: LayerConfig[];
-  sublayers?: any[];
-  definitionExpression?: string;
-  labelsVisible?: boolean;
-  labelingInfo?: any[];
-  featureReduction?: any;
-  orderBy?: any[];
+  renderer?: RendererConfig;
   outFields?: string[];
-  popupTemplate?: PopupTemplateConfig;
+
+  popupDisplayFields?: Map<string, LabelConfig>;
+  sublayers?: SublayerConfig[];
+
+  defaultEdge?: string;
+  availableEdges?: string[];
+  castShadows?: boolean;
+
+  symbolLayers?: {
+    edges: EdgeConfig;
+  }
+
+  isPointCloudLayer?: boolean;
+  pointSizes?: PointConfig;
+  pointDensity?: PointConfig;
+
+
+
+  // popupEnabled?: boolean;
+  // elevationInfo?: any;
+  
+  // definitionExpression?: string;
+  // labelsVisible?: boolean;
+  // labelingInfo?: any[];
+  // featureReduction?: any;
+  // orderBy?: any[];
+
+  // popupTemplate?: PopupTemplateConfig;
 }
 
 export interface PopupTemplateConfig {
@@ -105,32 +250,40 @@ export interface FieldInfoConfig {
   };
 }
 
-export interface SymbolLayerConfig {
+export interface RendererSymbolLayerConfig {
   type: string;
-  material?: {
-    color: string;
-    colorMixMode: string;
-  };
-  size?: number;
-  outline?: {
-    color: string;
-    size: number;
-  };
+  waveDirection: number;
+  color: string;
+  waveStrength: string;
+  waterbodySize: string;
+}
+
+export interface RendererSymbolConfig {
+  type: string;
+  symbolLayers?: RendererSymbolLayerConfig[];
+  name?: string;
+  styleName?: string;
+}
+
+export interface VisualVariableConfig {
+  type: string;
+  valueUnit: string;
+  axis: string;
+  field: string;
+}
+
+export interface UniqueValueInfoConfig {
+  value: string;
+  symbol: RendererSymbolConfig;
 }
 
 export interface RendererConfig {
   type: string;
-  symbol?: {
-    type: string;
-    symbolLayers: SymbolLayerConfig[];
-  };
-  uniqueValueInfos?: Array<{
-    value: string;
-    symbol: {
-      type: string;
-      symbolLayers: SymbolLayerConfig[];
-    };
-  }>;
+  symbol?: RendererSymbolConfig;
+  field?: string;
+  defaultSymbol?: RendererSymbolConfig;
+  visualVariables?: VisualVariableConfig[];
+  uniqueValueInfos?: UniqueValueInfoConfig[];
 }
 
 // Slice widget configuration interface
