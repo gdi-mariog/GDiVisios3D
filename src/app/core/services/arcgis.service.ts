@@ -81,16 +81,20 @@ export class ArcGisService {
   }
 
     createMapFromConfig(cfg: AppConfig): Map {
-    const ground =
-      cfg.elevationLayerUrls?.length
-        ? new Ground({
-            layers: cfg.elevationLayerUrls.map((url: string) => new ElevationLayer({ url }))
-          })
-        : undefined;
+    // const ground =
+    //   cfg.elevationLayerUrls?.length
+    //     ? new Ground({
+    //         layers: cfg.elevationLayerUrls.map((url: string) => new ElevationLayer({ url: url }))
+    //       })
+    //     : undefined;
+
+    // this.map = new Map({
+    //   basemap: cfg.basemap ?? 'streets-vector',
+    //   ground
+    // });
 
     this.map = new Map({
-      basemap: cfg.basemap ?? 'streets-vector',
-      ground
+      basemap: cfg.basemap ?? 'streets-vector'
     });
 
     for (const layerCfg of cfg.layers ?? []) {
@@ -98,6 +102,15 @@ export class ArcGisService {
 
       if (layer) 
         this.map.add(layer);
+
+      if(cfg.elevationLayerUrls !== null)
+      {
+        cfg.elevationLayerUrls.forEach((item: string) => {
+          this.map!.ground.layers.push(new ElevationLayer({
+            url: item
+          }));
+        });
+      }
     }
 
     return this.map;
@@ -128,6 +141,16 @@ export class ArcGisService {
 
   createLayer(cfg: LayerConfig) {
   const common = this.commonProps(cfg);
+
+  // handle group-like layers (config has nested "layers" arrays)
+  if ((cfg as any).layers) {
+    return new GroupLayer({
+      ...common,
+      layers: (cfg as any).layers
+        .map((childCfg: LayerConfig) => this.createLayer(childCfg))
+        .filter(Boolean) as any[]
+    });
+  }
 
   // Set opacity only for supported layer types
   switch (cfg.type) {
@@ -194,17 +217,9 @@ export class ArcGisService {
       return new IntegratedMeshLayer({ ...common, url: cfg.url });
 
     default:
-      // handle group-like layers (your config has nested "layers" arrays)
-      if ((cfg as any).layers) {
-        return new GroupLayer({
-          ...common,
-          layers: (cfg as any).layers
-            .map((childCfg: LayerConfig) => this.createLayer(childCfg))
-            .filter(Boolean) as any[]
-        });
-      }
       console.warn('Unknown layer type:', cfg.type, cfg);
-      return undefined;
+
+    return undefined;
   }
 }
 

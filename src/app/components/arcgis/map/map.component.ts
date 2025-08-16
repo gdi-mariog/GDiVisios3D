@@ -61,15 +61,20 @@ export class MapComponent implements OnInit, OnDestroy {
         } else {
           this.showSliceWidget = false;
         }
+
         if (config.showLineOfSightWidget && this.sceneView) {
           this.showLineOfSightWidget = true;
           this.lineOfSightConfig = (config as any).lineOfSightConfig || {};
         } else {
           this.showLineOfSightWidget = false;
         }
-        if (config.showBuildingExplorerWidget) this.viewService.addBuildingExplorerWidget();
-  // if (config.showLineOfSightWidget) this.viewService.addLineOfSightWidget(); // Deprecated
-        if (config.showElevationProfileWidget) this.viewService.addElevationProfileWidget();
+
+        if (config.showBuildingExplorerWidget) 
+          this.viewService.addBuildingExplorerWidget();
+
+        // if (config.showLineOfSightWidget) this.viewService.addLineOfSightWidget(); // Deprecated
+        if (config.showElevationProfileWidget) 
+          this.viewService.addElevationProfileWidget();
       }
     });
   }

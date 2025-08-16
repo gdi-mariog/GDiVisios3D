@@ -60,6 +60,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "ssl": true,
+            "sslKey": "src/ssl/genetrix-tech.hr.key",
+            "sslCert": "src/ssl/genetrix-tech.hr.crt"
+          },
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
