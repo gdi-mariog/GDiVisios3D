@@ -1,4 +1,20 @@
-// Configuration interfaces for the GDI Visios3D application
+export type SupportedLayerType =
+  | 'WMSLayer'
+  | 'WMTSLayer'
+  | 'FeatureLayer'
+  | 'SceneLayer'
+  | 'PointCloudLayer'
+  | 'BuildingSceneLayer'
+  | 'MapImageLayer'
+  | 'TileLayer'
+  | 'ImageryTileLayer'
+  | 'VectorTileLayer'
+  | 'IntegratedMeshLayer';
+
+export type ListMode = 'show' | 'hide' | 'hide-children';
+export type VisibilityMode = 'independent' | 'inherited';
+
+// Configuration interfaces for the application
 export interface AppConfig {
   title: string;
   subtitle: string;
@@ -188,13 +204,14 @@ export interface LayerConfig {
   title: string;
   opacity: number;
   visible: boolean;
-  listMode: string;
+  listMode: ListMode;
 
-  type?: string;
+  //type?: string;
+  type?: SupportedLayerType;
   url?: string;
   isTileLayer?: boolean;
   legendEnabled?: boolean;
-  visibilityMode?: string;
+  visibilityMode?: VisibilityMode;
 
   layers?: LayerConfig[];
   renderer?: RendererConfig;
@@ -217,16 +234,22 @@ export interface LayerConfig {
 
 
 
+
+  //not used for now
   // popupEnabled?: boolean;
-  // elevationInfo?: any;
+  elevationInfo?: any;
   
-  // definitionExpression?: string;
-  // labelsVisible?: boolean;
-  // labelingInfo?: any[];
+  definitionExpression?: string;
+  labelsVisible?: boolean;
+  labelingInfo?: any[];
   // featureReduction?: any;
   // orderBy?: any[];
 
-  // popupTemplate?: PopupTemplateConfig;
+  popupTemplate?: PopupTemplateConfig;
+
+  minScale?: number;
+  maxScale?: number;
+  portalItem?: { id: string };
 }
 
 export interface PopupTemplateConfig {

@@ -1,0 +1,9 @@
+.line-of-sight-widget-overlay {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 100;
+  width: 400px;
+  height: 400px;
+  pointer-events: auto;
+}
