@@ -102,15 +102,15 @@ export class ArcGisService {
 
       if (layer) 
         this.map.add(layer);
+    }
 
-      if(cfg.elevationLayerUrls !== null)
-      {
-        cfg.elevationLayerUrls.forEach((item: string) => {
-          this.map!.ground.layers.push(new ElevationLayer({
-            url: item
-          }));
-        });
-      }
+    if(cfg.elevationLayerUrls !== null)
+    {
+      cfg.elevationLayerUrls.forEach((item: string) => {
+        this.map!.ground.layers.push(new ElevationLayer({
+          url: item
+        }));
+      });
     }
 
     return this.map;
