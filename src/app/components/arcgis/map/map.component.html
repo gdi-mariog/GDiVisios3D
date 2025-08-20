@@ -1,6 +1,11 @@
 <div class="map-container">
   <div #viewDiv id="viewDiv" class="map" style="width:100%;height:100vh;"></div>
 
+  <app-home
+    [view]="sceneView!"
+    class="home-widget-overlay">
+  </app-home>
+
   @if (showSliceWidget && sceneView && sliceConfig) {
     <app-slice
       [view]="sceneView!"

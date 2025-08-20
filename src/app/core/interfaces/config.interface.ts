@@ -1,3 +1,13 @@
+import MeshSymbol3D from "@arcgis/core/symbols/MeshSymbol3D";
+
+import SimpleRenderer from '@arcgis/core/renderers/SimpleRenderer';
+import UniqueValueRenderer from '@arcgis/core/renderers/UniqueValueRenderer';
+import ClassBreaksRenderer from '@arcgis/core/renderers/ClassBreaksRenderer';
+import PointCloudRGBRenderer from '@arcgis/core/renderers/PointCloudRGBRenderer';
+import RasterColormapRenderer from '@arcgis/core/renderers/RasterColormapRenderer';
+import RasterShadedReliefRenderer from '@arcgis/core/renderers/RasterShadedReliefRenderer';
+import RasterStretchRenderer from '@arcgis/core/renderers/RasterStretchRenderer';
+
 export type SupportedLayerType =
   | 'WMSLayer'
   | 'WMTSLayer'
@@ -12,7 +22,8 @@ export type SupportedLayerType =
   | 'IntegratedMeshLayer';
 
 export type ListMode = 'show' | 'hide' | 'hide-children';
-export type VisibilityMode = 'independent' | 'inherited';
+export type VisibilityMode = 'independent' | 'inherited' | 'exclusive';
+export type ElevationMode = 'on-the-ground' | 'relative-to-ground' | 'absolute-height' | 'relative-to-scene';
 
 // Configuration interfaces for the application
 export interface AppConfig {
@@ -202,23 +213,28 @@ export interface LayerConfig {
   id?: string;
 
   title: string;
+  url?: string;
   opacity: number;
   visible: boolean;
   listMode: ListMode;
 
   //type?: string;
   type?: SupportedLayerType;
-  url?: string;
   isTileLayer?: boolean;
   legendEnabled?: boolean;
   visibilityMode?: VisibilityMode;
 
   layers?: LayerConfig[];
-  renderer?: RendererConfig;
+  //renderer?: RendererConfig;
+  renderer?: SimpleRenderer | UniqueValueRenderer | ClassBreaksRenderer | RasterStretchRenderer | RasterShadedReliefRenderer | RasterColormapRenderer;
   outFields?: string[];
 
-  popupDisplayFields?: Map<string, LabelConfig>;
-  sublayers?: SublayerConfig[];
+  //popupDisplayFields?: Map<string, LabelConfig>; 
+  popupDisplayFields?: Record<string, LabelConfig>;
+  //sublayers?: SublayerConfig[];
+  sublayers?: any;
+
+  meshSymbol3d?: MeshSymbol3D;
 
   defaultEdge?: string;
   availableEdges?: string[];
@@ -232,12 +248,8 @@ export interface LayerConfig {
   pointSizes?: PointConfig;
   pointDensity?: PointConfig;
 
-
-
-
-  //not used for now
-  // popupEnabled?: boolean;
-  elevationInfo?: any;
+  popupEnabled?: boolean;
+  elevationInfo?: ElevationMode;
   
   definitionExpression?: string;
   labelsVisible?: boolean;
@@ -250,6 +262,10 @@ export interface LayerConfig {
   minScale?: number;
   maxScale?: number;
   portalItem?: { id: string };
+
+  showZoomToFullExtentButton?: boolean;
+  solidEdge?: Object;
+  sketchEdge?: Object;
 }
 
 export interface PopupTemplateConfig {

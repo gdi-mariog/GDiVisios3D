@@ -123,8 +123,7 @@ export class ViewService {
       }
     });
 
-    // Home widget
-    this._view.ui.add(new Home({ view: this._view }), 'top-left');
+  // Home widget removed. Use Home web component in the map component template instead.
 
     await this._view.when();
 

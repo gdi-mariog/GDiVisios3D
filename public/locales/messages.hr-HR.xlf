@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="header-basemap" datatype="html">
+        <source>Basemap select</source>
+        <target>Odabir podloge</target>
+      </trans-unit>
+      <trans-unit id="header-toc" datatype="html">
+        <source>Table of contents</source>
+        <target>Tablica sadržaja</target>
+      </trans-unit>
+      <trans-unit id="header-bookmarks" datatype="html">
+        <source>Bookmarks</source>
+        <target>Novosti</target>
+      </trans-unit>
+      <trans-unit id="header-shadows" datatype="html">
+        <source>Shadows</source>
+        <target>Sjene</target>
+      </trans-unit>
+      <trans-unit id="header-settings" datatype="html">
+        <source>Settings</source>
+        <target>Postavke</target>
+      </trans-unit>
+      <trans-unit id="header-info" datatype="html">
+        <source>Info</source>
+        <target>O projektu</target>
+      </trans-unit>
+      <trans-unit id="header-help" datatype="html">
+        <source>Help</source>
+        <target>Pomoć</target>
+      </trans-unit>
+      <trans-unit id="header-tools" datatype="html">
+        <source/>
+        <target>{tool.Name, select, Draw {Crtanje} Measure {Mjerenje} Select {Odabir} }</target>
+      </trans-unit>
+      <trans-unit id="basemap-streets" datatype="html">
+        <source>Streets</source>
+        <target>Ulice</target>
+      </trans-unit>
+      <trans-unit id="basemap-satellite" datatype="html">
+        <source>Satellite</source>
+        <target>Satelitska</target>
+      </trans-unit>
+      <trans-unit id="basemap-topographic" datatype="html">
+        <source>Topographic</source>
+        <target>Topografska</target>
+      </trans-unit>
+      <trans-unit id="basemap-gray" datatype="html">
+        <source>Gray</source>
+        <target>Siva</target>
+      </trans-unit>
+      <trans-unit id="basemap-dark-gray" datatype="html">
+        <source>Dark Gray</source>
+        <target>Tamno siva</target>
+      </trans-unit>
+      <trans-unit id="panel-basemap" datatype="html">
+        <source>Basemap Select</source>
+        <target>Odabir podloge</target>
+      </trans-unit>
+      <trans-unit id="panel-bookmarks" datatype="html">
+        <source>New stuff</source>
+        <target>Novosti</target>
+      </trans-unit>
+      <trans-unit id="panel-new-service" datatype="html">
+        <source>Add new service</source>
+        <target>Dodavanje novog servisa</target>
+      </trans-unit>
+      <trans-unit id="new-service" datatype="html">
+        <source>Add new service</source>
+        <target>Dodaj servis</target>
+      </trans-unit>
+      <trans-unit id="choose-service-type" datatype="html">
+        <source>Choose service type</source>
+        <target>Vrsta servisa</target>
+      </trans-unit>
+      <trans-unit id="service-type" datatype="html">
+        <source>Service type</source>
+        <target>Vrsta servisa</target>
+      </trans-unit>
+      <trans-unit id="service-url" datatype="html">
+        <source>Service url</source>
+        <target>URL servisa</target>
+      </trans-unit>
+      <trans-unit id="service-title" datatype="html">
+        <source>Service title</source>
+        <target>Naziv servisa</target>
+      </trans-unit>
+      <trans-unit id="title" datatype="html">
+        <source>Service title</source>
+        <target>Naziv servisa</target>
+      </trans-unit>
+      <trans-unit id="edges" datatype="html">
+        <source>Edges</source>
+        <target>Iscrtavanje rubova</target>
+      </trans-unit>
+      <trans-unit id="solid" datatype="html">
+        <source>Solid edge</source>
+        <target>S rubom</target>
+      </trans-unit>
+      <trans-unit id="sketch" datatype="html">
+        <source>Sketch edge</source>
+        <target>Sketch rub</target>
+      </trans-unit>
+      <trans-unit id="noedge" datatype="html">
+        <source>No edge</source>
+        <target>Bez ruba</target>
+      </trans-unit>
+      <trans-unit id="pointcloud" datatype="html">
+        <source>Point Cloud</source>
+        <target>Oblak točaka</target>
+      </trans-unit>
+      <trans-unit id="pointsize" datatype="html">
+        <source>Point size</source>
+        <target>Veličina točke</target>
+      </trans-unit>
+      <trans-unit id="pointinch" datatype="html">
+        <source>Point per inch</source>
+        <target>Gustoća točaka</target>
+      </trans-unit>
+      <trans-unit id="add-new-service" datatype="html">
+        <source>Add new service</source>
+        <target>Dodavanje novog servisa</target>
+      </trans-unit>
+      <trans-unit id="add-service" datatype="html">
+        <source>Add service</source>
+        <target>Dodaj servis</target>
+      </trans-unit>
+      <trans-unit id="url" datatype="html">
+        <source>Layer url</source>
+        <target>URL servisa</target>
+      </trans-unit>
+      <trans-unit id="measure" datatype="html">
+        <source>Measure</source>
+        <target>Mjerenje</target>
+      </trans-unit>
+      <trans-unit id="draw" datatype="html">
+        <source>Draw</source>
+        <target>Crtanje</target>
+      </trans-unit>
+      <trans-unit id="select" datatype="html">
+        <source>Select</source>
+        <target>Odabir</target>
+      </trans-unit>
+      <trans-unit id="go-to-full-extent" datatype="html">
+        <source>Go to full extent</source>
+        <target>Pogled</target>
+      </trans-unit>
+      <trans-unit id="clear" datatype="html">
+        <source>Clear</source>
+        <target>Brisanje</target>
+      </trans-unit>
+      <trans-unit id="zoomto" datatype="html">
+        <source>Zoom To</source>
+        <target>Zoom na odabir</target>
+      </trans-unit>
+      <trans-unit id="info" datatype="html">
+        <source>Info</source>
+        <target>Opis alata</target>
+      </trans-unit>
+      <trans-unit id="tool-description" datatype="html">
+        <source>Tool description</source>
+        <target>Opis alata</target>
+      </trans-unit>
+      <trans-unit id="hide" datatype="html">
+        <source/>
+        <target>{toolMgr.ActiveTool.Hidden, select, Show {Prikaži} Hide {Sakrij} }</target>
+      </trans-unit>
+      <trans-unit id="remove" datatype="html">
+        <source>Remove</source>
+        <target>Brisanje</target>
+      </trans-unit>
+      <trans-unit id="time-of-day" datatype="html">
+        <source>Time of day (<x id="INTERPOLATION"/>)</source>
+        <target>Sat u danu (<x id="INTERPOLATION"/>)</target>
+      </trans-unit>
+      <trans-unit id="month-in-year" datatype="html">
+        <source>Month in year (<x id="INTERPOLATION"/>)</source>
+        <target>Mjesec u godini (<x id="INTERPOLATION"/>)</target>
+      </trans-unit>
+      <trans-unit id="shadows" datatype="html">
+        <source>Shadows</source>
+        <target>Sjene</target>
+      </trans-unit>
+      <trans-unit id="ambient-occulsion" datatype="html">
+        <source>Ambient Occulsion</source>
+        <target>Ambijentalne sjene</target>
+      </trans-unit>
+      <trans-unit id="head-shadows" datatype="html">
+        <source>Shadows</source>
+        <target>Sjene</target>
+      </trans-unit>
+      <trans-unit id="panel-settings" datatype="html">
+        <source>Settings</source>
+        <target>Postavke</target>
+      </trans-unit>
+      <trans-unit id="panel-toc-layerlist" datatype="html">
+        <source>Layer List</source>
+        <target>Popis slojeva</target>
+      </trans-unit>
+      <trans-unit id="panel-toc-legend" datatype="html">
+        <source>Legend</source>
+        <target>Legenda</target>
+      </trans-unit>
+      <trans-unit id="panel-toc-opacity" datatype="html">
+        <source>Opacity</source>
+        <target>Prozirnost</target>
+      </trans-unit>
+      <trans-unit id="panel-toc" datatype="html">
+        <source>Table of contents</source>
+        <target>Tablica sadržaja</target>
+      </trans-unit>
+      <trans-unit id="output-hide" datatype="html">
+        <source>Hidden</source>
+        <target>Sakrij</target>
+      </trans-unit>
+      <trans-unit id="output-clear" datatype="html">
+        <source>Clear</source>
+        <target>Očisti</target>
+      </trans-unit>
+      <trans-unit id="output-analysis" datatype="html">
+        <source>Analysis</source>
+        <target>Analiza</target>      
+       </trans-unit>
+      <trans-unit id="output-tool-modes" datatype="html">
+        <source/>
+        <target>{ mode, select, Point {Točka} Line {Linija} Polygon {Poligon} Multiple {Višestruka} Circle {Krug} }</target>
+      </trans-unit>
+      <trans-unit id="output-show-hide" datatype="html">
+        <source/>
+        <target>{'' + toolMgr.ActiveTool.Hidden, select, true {Prikaži} false {Sakrij} }</target>
+      </trans-unit>
+      <trans-unit id="output-tool-name" datatype="html">
+        <source/>
+        <target>{toolMgr.ActiveTool.Name, select, Draw {Crtanje} Measure {Mjerenje} Select {Odabir} }</target>
+      </trans-unit>
+      <trans-unit id="analysis-property-placeholder" datatype="html">
+        <source>Select property</source>
+        <target>Odaberite polje</target>
+      </trans-unit>
+      <trans-unit id="radius" datatype="html">
+        <source>Radius</source>
+        <target>Radijus</target>
+      </trans-unit>
+      <trans-unit id="copylocation" datatype="html">
+        <source>Copy location url</source>
+        <target>Kopiraj trenutni prikaz scene</target>
+      </trans-unit>
+      <trans-unit id="urlcopy" datatype="html">
+        <source>URL is copied!</source>
+        <target>Trenutni prikaz scene je kopiran</target>
+      </trans-unit>
+      <trans-unit id="slice" datatype="html">
+        <source>Create slice view</source>
+        <target>Novi isječak</target>
+      </trans-unit>
+      <trans-unit id="explorer" datatype="html">
+        <source>Building explorer</source>
+        <target>Detaljna pretraga objekta</target>
+      </trans-unit>
+      <trans-unit id="lineOfSight" datatype="html">
+        <source>Create Line of Sight</source>
+        <target>Linija dogledanja</target>
+      </trans-unit>
+      <trans-unit id="elevation" datatype="html">
+        <source>Create Elevation profile</source>
+        <target>Visinski profil</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

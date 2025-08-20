@@ -7,6 +7,7 @@ import SceneView from '@arcgis/core/views/SceneView';
 
 import { SliceComponent } from '../slice/slice.component';
 import { LineOfSightComponent } from '../line-of-sight/line-of-sight.component';
+import { HomeComponent } from '../home/home.component';
 import { ConfigService } from '../../../core/services/config.service';
 import { AppConfig } from '../../../core';
 import { ArcGisService } from '../../../core/services/arcgis.service';
@@ -15,7 +16,7 @@ import { ViewService } from '../../../core/services/view.service';
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [CommonModule, SliceComponent, LineOfSightComponent],
+  imports: [CommonModule, SliceComponent, LineOfSightComponent, HomeComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
@@ -53,6 +54,8 @@ export class MapComponent implements OnInit, OnDestroy {
         const container = this.viewDiv.nativeElement;
         //this.mapView = await this.arcgisService.initMapView(container, config);
         this.sceneView = await this.arcgisService.initSceneView(container, config);
+
+        await this.viewService.load(container, this.appConfig);
 
         // if (config.showSliceWidget) this.viewService.addSliceWidget(); // Deprecated
         if (config.showSliceWidget && this.sceneView) {
