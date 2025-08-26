@@ -52,8 +52,10 @@ export class MapComponent implements OnInit, OnDestroy {
         this.appConfig = config;
 
         const container = this.viewDiv.nativeElement;
-        //this.mapView = await this.arcgisService.initMapView(container, config);
-        this.sceneView = await this.arcgisService.initSceneView(container, config);
+        // //this.mapView = await this.arcgisService.initMapView(container, config);
+        // this.sceneView = await this.arcgisService.initSceneView(container, config);
+        //this.mapView = await this.arcgisService.initMapView(container);
+        this.sceneView = await this.arcgisService.initSceneView(container);
 
         await this.viewService.load(container, this.appConfig);
 

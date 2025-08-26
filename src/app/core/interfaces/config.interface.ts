@@ -21,9 +21,16 @@ export type SupportedLayerType =
   | 'VectorTileLayer'
   | 'IntegratedMeshLayer';
 
-export type ListMode = 'show' | 'hide' | 'hide-children';
-export type VisibilityMode = 'independent' | 'inherited' | 'exclusive';
-export type ElevationMode = 'on-the-ground' | 'relative-to-ground' | 'absolute-height' | 'relative-to-scene';
+export const ListModes = ['show', 'hide', 'hide-children'] as const;
+export type ListMode = typeof ListModes[number];
+export const VisibilityModes = ['independent', 'inherited', 'exclusive'] as const;
+export type VisibilityMode = typeof VisibilityModes[number];
+export const ElevationModes = ['on-the-ground', 'relative-to-ground', 'absolute-height', 'relative-to-scene'] as const;
+export type ElevationMode = typeof ElevationModes[number];
+export const ViewQualityProfileModes = ['low', 'medium', 'high'] as const;
+export type ViewQualityProfileMode = typeof ViewQualityProfileModes[number];
+export const AtmosphereQualityModes = ['low', 'high'] as const;
+export type AtmosphereQualityMode = typeof AtmosphereQualityModes[number];
 
 // Configuration interfaces for the application
 export interface AppConfig {
@@ -80,9 +87,9 @@ export interface AppConfig {
   maxCircleRadius: number;
   circleRadiusUnit: string;
 
-  viewQualityProfile: string;
+  viewQualityProfile: ViewQualityProfileMode;
   atmosphereEnabled: boolean;
-  atmosphereQuality: string;
+  atmosphereQuality: AtmosphereQualityMode;
   starsEnabled: boolean;
 
   viewHighlightColor: string;
@@ -97,26 +104,30 @@ export interface AppConfig {
   bookmarks?: BookmarkConfig[];
 
   selectToolAnalysisOperations: string[];
-
   selectToolAnalysisOperationalLabels: string[];
 
   drawToolEnabled: boolean;
-
   measureToolEnabled: boolean;
   measureToolOutFields: [];
 
   solidEdge: EdgeConfig;
   sketchEdge: EdgeConfig;
 
-  measureToolPointSymbol: {
-    symbolLayers: SymbolLayerConfig[];
-  };
-  measureToolLineSymbol: {
-    symbolLayers: SymbolLayerConfig[];
-  };
+  // measureToolPointSymbol: {
+  //   symbolLayers: SymbolLayerConfig[];
+  // };
+  measureToolPointSymbol: any;
+  // measureToolLineSymbol: {
+  //   symbolLayers: SymbolLayerConfig[];
+  // };
+  measureToolLineSymbol: any;
 
-  selectToolPolygonSymbol: SymbolConfig;
-  selectToolCircleSymbol: SymbolConfig;
+  //selectToolPolygonSymbol: SymbolConfig;
+  selectToolPolygonSymbol: any;
+  //selectToolCircleSymbol: SymbolConfig;
+  selectToolCircleSymbol: any;
+  //selectToolPointSymbol: ?
+  selectToolPointSymbol: any;
 
   geometryServiceUrl: string;
   projectionSpatialReferenceWkid: number;
@@ -125,6 +136,13 @@ export interface AppConfig {
   layers: LayerConfig[];
 
   camera?: CameraConfig;
+
+  //drawToolPointSymbol: PointSymbol3DConfig;
+  drawToolPointSymbol?: any;
+  //drawToolLineSymbol: LineSymbol3DConfig;
+  drawToolLineSymbol?: any;
+  //drawToolPolygonSymbol: SimpleFillSymbolConfig;
+  drawToolPolygonSymbol?: any;
 }
 
 export interface BookmarkConfig {
@@ -340,4 +358,19 @@ export interface SliceWidgetConfig {
 // Add slice config to main interface (extending existing properties)
 export interface SliceConfig extends SliceWidgetConfig {
   // Additional slice-specific properties can be added here
+}
+
+export interface PointSymbol3DConfig {
+  declaredClass: string;
+  type: string;
+}
+
+export interface LineSymbol3DConfig {
+  declaredClass: string;
+  type: string;
+}
+
+export interface SimpleFillSymbolConfig {
+  declaredClass: string;
+  type: string;
 }

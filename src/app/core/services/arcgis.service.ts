@@ -33,6 +33,7 @@ import RasterStretchRenderer from '@arcgis/core/renderers/RasterStretchRenderer'
 
 import PopupTemplate from '@arcgis/core/PopupTemplate';
 import FieldInfo from '@arcgis/core/popup/FieldInfo';
+import { ConfigService } from './config.service';
 
 
 @Injectable({ providedIn: 'root' })
@@ -42,17 +43,23 @@ export class ArcGisService {
   sceneView?: SceneView;
   appConfig!: AppConfig;
 
-  async initMapView(container: HTMLDivElement, appConfig: AppConfig): Promise<MapView> {
-    this.appConfig = appConfig;
+  constructor(private configService: ConfigService) {
+    this.appConfig = this.configService.getConfig()!;
+  }
 
+  // async initMapView(container: HTMLDivElement, appConfig: AppConfig): Promise<MapView> {
+  //   this.appConfig = appConfig;
+    async initMapView(container: HTMLDivElement): Promise<MapView> {
     if (!this.map)
-       this.createMapFromConfig(appConfig);
+       this.createMapFromConfig(this.appConfig);
+
+    const [lon, lat, elev] = this.configService.ViewLonLatElevation;
 
     this.mapView = new MapView({
       container,
       map: this.map,
-      center: [ appConfig.viewLonLatElevation[0] ?? 15.9793, appConfig.viewLonLatElevation[1] ?? 45.7776 ],
-      zoom: appConfig.viewLonLatElevation[2] ?? 12
+      center: [ lon,lat ],
+      zoom: elev ?? 1777
     });
 
     await this.mapView.when();
@@ -60,30 +67,30 @@ export class ArcGisService {
     return this.mapView;
   }
 
-  async initSceneView(container: HTMLDivElement, appConfig: AppConfig): Promise<SceneView> {
-    this.appConfig = appConfig;
+  // async initSceneView(container: HTMLDivElement, appConfig: AppConfig): Promise<SceneView> {
+  //   this.appConfig = appConfig;
+  async initSceneView(container: HTMLDivElement): Promise<SceneView> {
+    if (!this.map)
+      this.createMapFromConfig(this.appConfig);
 
-    if (!this.map) 
-      this.createMapFromConfig(appConfig);
-
-    const [lon, lat, elev] = appConfig.viewLonLatElevation ?? [15.9793, 45.7776, 1200];
-    const [heading, tilt/*, fov*/] = appConfig.viewHeadingTiltFOV ?? [0, 66, 55];
+    const [lon, lat, elev] = this.configService.ViewLonLatElevation ;
+    const [heading, tilt, fov] = this.configService.ViewHeadingTiltFov;
 
     this.sceneView = new SceneView({
       container,
       map: this.map,
       camera: {
-        position: { longitude: lon, latitude: lat, z: elev ?? 1200 },
+        position: { longitude: lon, latitude: lat, z: elev ?? 1777 },
         heading,
         tilt
       },
-      qualityProfile: (appConfig.viewQualityProfile as any) ?? 'high',
+      qualityProfile: (this.appConfig.viewQualityProfile as any) ?? 'high',
       environment: {
-        lighting: { directShadowsEnabled: true, date: appConfig.initialDateTime ? new Date(appConfig.initialDateTime) : undefined },
-        starsEnabled: appConfig.starsEnabled ?? true,
-        atmosphereEnabled: appConfig.atmosphereEnabled ?? true
+        lighting: { directShadowsEnabled: true, date: this.appConfig.initialDateTime ? new Date(this.appConfig.initialDateTime) : undefined },
+        starsEnabled: this.appConfig.starsEnabled ?? true,
+        atmosphereEnabled: this.appConfig.atmosphereEnabled ?? true
       },
-      popup: { dockEnabled: true, dockOptions: { position: appConfig.popupPosition ?? 'top-center' } }
+      popup: { dockEnabled: true, dockOptions: { position: this.appConfig.popupPosition ?? 'top-center' } } 
     });
 
     await this.sceneView.when();

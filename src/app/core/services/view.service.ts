@@ -250,7 +250,7 @@ set DirectShadows(value: boolean) {
   }
 
   goToBookmark(bookmark: any) {
-    const [x, y, z] = bookmark.viewLonLatElevation;
+    const [x, y, z] = bookmark.viewLonLatElevation ?? [15.9793, 45.7776, 1200];
     const [heading, tilt, fov] = bookmark.viewHeadingTiltFOV;
     const cam = new Camera({
       position: new Point({ x, y, z, hasZ: true }),
